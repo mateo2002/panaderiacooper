@@ -1,0 +1,58 @@
+<div class="row" style="text-align-last: center;">
+    <h3>Administración de Usuarios</h3>
+</div>
+<button class="btn btn-secondary" (click)="fnShowForm()" >Nuevo Usuario</button>
+<div class="alert alert-success" *ngIf="opResult.success" role="alert">
+    {{opResultMsg}}
+</div>
+<div class="alert alert-danger" *ngIf="opResult.error" role="alert">
+    Ocurrio un error
+</div>
+<div class="row" *ngIf="showForm">
+    <form>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nombre de usuario</label>
+            <input type="email" [(ngModel)]="usuario.username" class="form-control" id="exampleInputEmail1" name="username" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <input type="password" [(ngModel)]="usuario.password" class="form-control" name="password" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3 form-check">
+            <input type="radio" (change)="onChange($event)" class="form-check-input" id="admin" name="role">
+            <label class="form-check-label" for="exampleCheck1">Administrador</label>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="radio" (change)="onChange($event)" class="form-check-input" id="user" name="role">
+            <label class="form-check-label" for="exampleCheck1">Usuario basico</label>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="submit($event)">Enviar</button>
+        <button class="btn btn-primary" (click)="fnShowForm()">Cancelar</button>
+    </form>
+</div>
+<div class="row" *ngIf="!showForm">
+   <!-- <h2>Filtro</h2>-->
+</div>
+<br>
+<div class="row" *ngIf="!showForm">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id usuario</th>
+                <th scope="col">Nombre de usuario</th>
+                <th scope="col">Contraseña</th>
+                <th scope="col">Role de usuario</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of users">
+                <th scope="row">{{item.id}}</th>
+                <td>{{item.username}}</td>
+                <td>{{item.password}}</td>
+                <td>{{item.role}}</td>
+                <td><a class="btn btn-outline-primary" (click)="update(item)">Modificar</a>&nbsp;<a class="btn btn-outline-danger">Eliminar</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

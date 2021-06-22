@@ -1,0 +1,21 @@
+<div class="card" style="width: 14rem;margin:8px">
+    <img [src]="producto.imagenUrl" width="70" height="140" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h6 class="card-title">{{producto.nombre | uppercase}}</h6>
+        <p class="card-text">{{producto.descripcion}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>{{producto.precioVenta}} $</strong></li>
+        <li class="list-group-item">{{producto.codigo | uppercase}}</li>
+        <li class="list-group-item"><strong>{{producto.stock}}</strong></li>
+    </ul>
+    <div class="card-body">
+        <a href="#" (click)="addCart(producto)" class="btn btn-info card-link"><i class="bi bi-cash-coin"></i></a>
+        <a [routerLink]="['/producto',producto.id]" class="btn btn-info card-link"><i class="bi bi-eye"></i></a>
+    </div>
+    <div class="qty">
+        <a (click)="plus()" class="btn btn-outline-success"><i class="bi bi-cart-plus"></i></a>
+        <input type="text" [(ngModel)]="qty" style="width: 35px; margin: 2px 5px; text-align: center;">
+        <a (click)="less()" class="btn btn-outline-success"><i class="bi bi-cart-dash-fill"></i></a>
+    </div>
+</div>

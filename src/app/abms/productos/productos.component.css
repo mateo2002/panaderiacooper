@@ -1,0 +1,9 @@
+.qty {
+    display: flex;
+    position: relative;
+    text-align: center;
+    align-self: center;
+}
+.card-body{
+    align-self: center;
+}

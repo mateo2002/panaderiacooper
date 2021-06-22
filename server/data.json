@@ -1,0 +1,190 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin",
+      "role": "Admin"
+    },
+    {
+      "id": 1,
+      "username": "user",
+      "password": "user",
+      "role": "user"
+    },
+    {
+      "id": 2,
+      "username": "suarez@gmail.com",
+      "password": "efshjht",
+      "role": "Usuario"
+    },
+    {
+      "id": 3,
+      "username": "marama",
+      "password": "marama",
+      "role": "Usuario"
+    },
+    {
+      "id": 4,
+      "username": "kelly slater",
+      "password": "lolo",
+      "role": "Admin"
+    },
+    {
+      "id": 5,
+      "username": "andyairons",
+      "password": "1234",
+      "role": "Admin"
+    },
+    {
+      "id": 6,
+      "username": "AndyMacdonal",
+      "password": "1234",
+      "role": "Admin"
+    },
+    {
+      "id": 7,
+      "username": "Desousa",
+      "password": "1234",
+      "role": "Usuario"
+    },
+    {
+      "id": 8,
+      "username": "MarkWalver",
+      "password": "1234",
+      "role": "Admin"
+    },
+    {
+      "id": 9,
+      "username": "Kaduo99",
+      "password": "drtjykul",
+      "role": "Usuario"
+    },
+    {
+      "id": 10,
+      "username": "Maikel@gmail.com",
+      "password": "12345",
+      "role": "Usuario"
+    },
+    {
+      "id": 11,
+      "username": "alejo@gmi.com",
+      "password": "123",
+      "role": "Admin"
+    },
+    {
+      "id": 12,
+      "username": "",
+      "password": "",
+      "role": ""
+    },
+    {
+      "id": 13,
+      "username": "",
+      "password": "",
+      "role": ""
+    }
+  ],
+  "productos": [
+    {
+      "id": 1,
+      "codigo": "AAA",
+      "nombre": "Medialunas",
+      "descripcion": "Media lunas 500gr",
+      "precioVenta": 300,
+      "precioCosto": 233,
+      "imagenUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl928k2tkCcZYFcOgy7rxPP_9VPZkHPeNxAA&usqp=CAU",
+      "stock": 10
+    },
+    {
+      "id": 2,
+      "codigo": "ABC",
+      "nombre": "Tortas",
+      "descripcion": "Torta artesanal",
+      "precioVenta": 349,
+      "precioCosto": 250,
+      "imagenUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPKjRL-YKT999IoDHtAvuvaVqLglmY4b0P2A&usqp=CAU",
+      "stock": 20
+    },
+    {
+      "id": 5,
+      "codigo": "AAC",
+      "nombre": "Masas secas",
+      "descripcion": "Masas por kilo",
+      "precioVenta": 750,
+      "precioCosto": 500,
+      "imagenUrl": "https://i.ytimg.com/vi/oWNGEootWuA/maxresdefault.jpg",
+      "stock": 25
+    },
+    {
+      "id": 6,
+      "codigo": "987",
+      "nombre": "Budin ingles",
+      "descripcion": "Budin con frutas secas",
+      "precioVenta": 900,
+      "precioCosto": 700,
+      "imagenUrl": "https://i.pinimg.com/originals/c3/6f/f1/c36ff18e891149b484deb3dadf468d14.jpg",
+      "stock": 38
+    },
+    {
+      "id": 7,
+      "codigo": "987",
+      "nombre": "Torta pirineos",
+      "descripcion": "Torta especial",
+      "precioVenta": 900,
+      "precioCosto": 700,
+      "imagenUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHipX3LuXBTYrUPb7MBgJKALMx_FbCHAJX5w&usqp=CAU",
+      "stock": 38
+    },
+    {
+      "id": 8,
+      "codigo": "987",
+      "nombre": "Ojitos",
+      "descripcion": "Ojitos por kilo",
+      "precioVenta": 900,
+      "precioCosto": 700,
+      "imagenUrl": "https://imagenes.montevideo.com.uy/imgnoticias/201506/_W880_H495/506302.JPG",
+      "stock": 38
+    },
+    {
+      "id": 9,
+      "codigo": "AGG",
+      "nombre": "Bizcochos por kilo ",
+      "descripcion": "Biscochos 500gr",
+      "precioVenta": 45,
+      "precioCosto": 40,
+      "imagenUrl": "http://4.bp.blogspot.com/-5bHbsQenAEA/T9jVkVFJKhI/AAAAAAAAAOw/3lTdgpAL03c/s1600/P1090860.JPG",
+      "stock": 10
+    },
+    {
+      "id": 11,
+      "codigo": "TTT",
+      "nombre": "Pan",
+      "descripcion": "loremp",
+      "precioVenta": "45",
+      "precioCosto": "150",
+      "imagenUrl": "https://t2.rg.ltmcdn.com/es/images/9/6/6/img_pan_flauta_22669_600.jpg",
+      "stock": 0
+    },
+    {
+      "id": 12,
+      "codigo": "TTO",
+      "nombre": "Pebetes",
+      "descripcion": "Pebetes por 10",
+      "precioVenta": "245",
+      "precioCosto": "150",
+      "imagenUrl": "https://cdn01.supercomercio.uy/Image/Product/1800x2400_P/637030428421707540.png",
+      "stock": 0
+    },
+    {
+      "id": 10,
+      "codigo": "TUO",
+      "nombre": "Sandwiches",
+      "descripcion": "Pebetes por 100",
+      "precioVenta": "645",
+      "precioCosto": "150",
+      "imagenUrl": "https://placeralplato.com/files/2015/05/Receta-de-sndwiches-de-miga.jpg",
+      "stock": 0
+    }
+  ]
+}
