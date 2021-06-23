@@ -17,6 +17,9 @@ export class UsuariosComponent implements OnInit {
     password:"",
     role:""
   }
+  sku = "";
+  showTrash = false;
+  backup: Usuario[] = [];
   opResult = {
     success:false,
     error:false
@@ -32,6 +35,7 @@ export class UsuariosComponent implements OnInit {
   ngOnInit(): void {
     this._userService.getUsers().subscribe((response:any)=>{
       this.users = response;
+      this.backup = this.users;
     })
   }
 
@@ -95,4 +99,24 @@ this._userService.eliminarUsuario(id).subscribe((response:any)=>{
   hide(){
     this.opResult.success = true
   }
+
+  filtrar(){
+
+    if(this.sku.length > 0){
+      let filteredUsers = this.users.filter(usuario =>{
+        return usuario.username.toLowerCase() === this.sku.toLowerCase();
+      });
+      this.users = filteredUsers;
+    };
+       }
+
+       handle(){
+        this.showTrash = true;
+      };
+
+      limpiar(){
+        this.showTrash = false;
+        this.sku = "";
+        this.users = this.backup
+      }
 }

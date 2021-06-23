@@ -158,7 +158,7 @@
       "precioVenta": "45",
       "precioCosto": "150",
       "imagenUrl": "https://t2.rg.ltmcdn.com/es/images/9/6/6/img_pan_flauta_22669_600.jpg",
-      "stock": 0
+      "stock": "2"
     },
     {
       "id": 12,
@@ -188,7 +188,7 @@
       "precioVenta": "400",
       "precioCosto": "500",
       "imagenUrl": "https://lh3.googleusercontent.com/proxy/fhplsBe3GEWZa9TdLqqhI2MGVRPIbC9I9nNi3iTBATrNkgJ88VYRmwWHotrT60pcWhLkBT0zlugRXYDetedabvjP1p_tzu6J-CffKiNJMhg",
-      "stock": 0
+      "stock": "40"
     },
     {
       "id": 14,
@@ -199,16 +199,6 @@
       "precioCosto": "45",
       "imagenUrl": "https://www.cucinare.tv/wp-content/uploads/2020/07/Pan-%C3%A1rabe.jpg",
       "stock": 0
-    },
-    {
-      "id": 15,
-      "codigo": "RTRT",
-      "nombre": "Pinito",
-      "descripcion": "piniten",
-      "precioVenta": "90",
-      "precioCosto": "45",
-      "imagenUrl": "https://t2.rg.ltmcdn.com/es/images/9/6/6/img_pan_flauta_22669_600.jpg",
-      "stock": "12"
     }
   ]
 }

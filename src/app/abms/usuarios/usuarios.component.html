@@ -35,6 +35,16 @@
 </div>
 <br>
 <div class="row" *ngIf="!showForm">
+    <div class="col">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Nombre de usuario:</span>
+            <input type="text" (input)="handle()" class="form-control" [(ngModel)]="sku" placeholder="" aria-label="codigo" aria-describedby="basic-addon1">
+        </div>
+    </div>
+    <div class="col">
+        <button class="btn btn-outline-success" (click)="filtrar()"><i class="bi bi-search"></i></button>
+        <button *ngIf="showTrash" class="btn btn-outline-success" (click)="limpiar()"><i class="bi bi-trash"></i></button>
+    </div>
     <table class="table">
         <thead>
             <tr>
