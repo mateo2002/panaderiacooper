@@ -1,0 +1,37 @@
+<div class="row" style="background: white;padding:15px 15px;margin: 0;">
+    <form class="row gy-2 gx-3 align-items-center" style="width:50%">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" [(ngModel)]="producto.nombre" class="form-control" name="nombre">
+        </div>
+        <div class="mb-3">
+            <label for="codigo" class="form-label">Codigo</label>
+            <input type="text" [(ngModel)]="producto.codigo" class="form-control" name="codigo">
+        </div>
+        <div class="input-group mb-3">
+            <label for="preciov" class="form-label">Precio de Venta</label>
+            <span class="input-group-text">$</span>
+            <input type="text" [(ngModel)]="producto.precioVenta" class="form-control" name="preciov" aria-label="Amount (to the nearest dollar)">
+            <span class="input-group-text">.00</span>
+        </div>
+        <div class="input-group mb-3">
+            <label for="precioc" class="form-label">Precio de Costo</label>
+            <span class="input-group-text">$</span>
+            <input type="text" [(ngModel)]="producto.precioCosto" class="form-control" name="precioc" aria-label="Amount (to the nearest dollar)">
+            <span class="input-group-text">.00</span>
+        </div>
+        <div class="mb-3">
+            <label for="codigo" class="form-label">Stock</label>
+            <input type="text" [(ngModel)]="producto.stock" class="form-control" name="stock">
+        </div>
+        <div class="mb-3">
+            <label for="imagenUrl" class="form-label">Imagen</label>
+            <input type="text" [(ngModel)]="producto.imagenUrl" class="form-control" name="imagenUrl">
+        </div>
+        <div class="mb-3">
+            <textarea name="descripcion" [(ngModel)]="producto.descripcion" placeholder="Descripcion" name="descripcion" cols="78" rows="10"></textarea>
+        </div>
+
+        <button type="submit" (click)="save($event)" class="btn btn-primary">Guardar</button>
+    </form>
+</div>

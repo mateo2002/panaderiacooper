@@ -1,7 +1,16 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="app.component.css">
+</head>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
     <img src="../assets/panaderia-nueva-cooper-logo.jpg" width="120" height="80">
-        <a class="navbar-brand" href="#" style="color: blue;">&nbsp;Panaderia Cooper&nbsp;</a>
+        <a class="navbar-brand" href="#" style="color: rgb(104, 104, 192);">&nbsp;&nbsp;HOME&nbsp;</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -9,13 +18,16 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <!--  <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>-->
+                </li>
                 <li class="nav-item">
                     <a class="nav-link active" [routerLink]="'/inicio'" aria-current="page" href="#">Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" [routerLink]="'/abm/productos'">Productos</a>
                 </li>
+            <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>-->
                 <li class="nav-item" *ngIf="_loginService.getUserRole() == 'Admin'">
                     <a class="nav-link" href="#">Administracion</a>
                 </li>
@@ -23,7 +35,10 @@
                     <a class="nav-link" [routerLink]="'/abm/usuarios'">Usuarios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link" [routerLink]="'/productos'" aria-current="page" href="#">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="'/caja'" aria-current="page" href="#">Caja</a>
                 </li>
             </ul>
             <form class="d-flex">
@@ -37,3 +52,19 @@
 <div class="container">
     <router-outlet></router-outlet>
 </div>
+    <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="https://www.facebook.com/PanaderiaNuevaCooper"><i class="icon ion-social-instagram"></i></a><a href="https://www.instagram.com/nuevacooper/?hl=es"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="https://www.facebook.com/PanaderiaNuevaCooper"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Company Name © 2018</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+

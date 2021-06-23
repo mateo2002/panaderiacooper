@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Usuario } from 'src/app/classes/usuario';
 import { UserService } from 'src/app/services/user.service';
 
@@ -81,6 +82,15 @@ export class UsuariosComponent implements OnInit {
     this.usuario.role = usuario.role;
     this.usuario.id = usuario.id
   }
+eliminar(id: number){
+this._userService.eliminarUsuario(id).subscribe((response:any)=>{
+  console.log(response)
+  const newItems = this.users.filter((item:any)=>{
+    return item.id !== id
+  });
+  this.users = newItems;
+})
+}
 
   hide(){
     this.opResult.success = true

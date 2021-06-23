@@ -10,6 +10,10 @@ import { UsuariosComponent } from './abms/usuarios/usuarios.component';
 import { ProductosComponent } from './abms/productos/productos.component';
 import { ListaProductosComponent } from './lista-productos/lista-productos.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { ProductoDetalleComponent } from './producto-detalle/producto-detalle.component';
+import { ProductoCrudComponent } from './producto-crud/producto-crud.component';
+import { AddProductoComponent } from './producto-crud/add-producto/add-producto.component';
+import { CajaComponent } from './caja/caja.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { InicioComponent } from './inicio/inicio.component';
     UsuariosComponent,
     ProductosComponent,
     ListaProductosComponent,
-    InicioComponent
+    InicioComponent,
+    ProductoDetalleComponent,
+    ProductoCrudComponent,
+    AddProductoComponent,
+    CajaComponent
   ],
   imports: [
     BrowserModule,

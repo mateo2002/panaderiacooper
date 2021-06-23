@@ -1,0 +1,39 @@
+<div class="row" style="background: white;padding:15px 15px;margin: 0;">
+    <h3><a [routerLink]="['/add-producto',0]" class="btn btn-primary">Crear Producto</a></h3>
+   <!-- <div class="row">
+        <input placeholder="Buscar" type="text">
+    </div>-->
+    <div class="col">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Codigo producto:</span>
+            <input type="text" (input)="handle()" class="form-control" [(ngModel)]="sku" placeholder="" aria-label="codigo" aria-describedby="basic-addon1">
+        </div>
+    </div>
+    <div class="col">
+        <button class="btn btn-outline-success" (click)="filtrar()"><i class="bi bi-search"></i></button>
+        <button *ngIf="showTrash" class="btn btn-outline-success" (click)="limpiar()"><i class="bi bi-trash"></i></button>
+    </div>
+    <div class="col">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col" *ngFor="let item of columnas">{{item | uppercase}}</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of productos">
+                    <td><img [src]="item.imagenUrl" height="50px" width="50px" alt=""></td>
+                    <td>{{item.nombre}}</td>
+                    <td>{{item.codigo}}</td>
+                    <td>{{item.descripcion}}</td>
+                    <td>{{item.precioVenta}}</td>
+                    <td>{{item.precioCosto}}</td>
+                    <td>{{item.stock}}</td>
+                    <td><a (click)="updateProducto(item)" class="btn btn-primary"><i class="bi bi-pencil"></i></a><a (click)="deleteProducto(item.id)" class="btn btn-danger"><i class="bi bi-trash"></i></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

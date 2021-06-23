@@ -19,4 +19,7 @@ export class UserService {
   actualizarUsuario(usuario:any){
     return this._http.put(this.url+"/"+usuario.id,usuario);
   }
+  eliminarUsuario(id:any){
+    return this._http.delete(this.url+"/"+id);
+  }
 }

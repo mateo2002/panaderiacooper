@@ -26,7 +26,7 @@
             <input type="radio" (change)="onChange($event)" class="form-check-input" id="user" name="role">
             <label class="form-check-label" for="exampleCheck1">Usuario basico</label>
         </div>
-        <button type="submit" class="btn btn-primary" (click)="submit($event)">Enviar</button>
+        <button type="submit" class="btn btn-primary" (click)="submit($event)">Enviar</button>&nbsp;
         <button class="btn btn-primary" (click)="fnShowForm()">Cancelar</button>
     </form>
 </div>
@@ -51,7 +51,7 @@
                 <td>{{item.username}}</td>
                 <td>{{item.password}}</td>
                 <td>{{item.role}}</td>
-                <td><a class="btn btn-outline-primary" (click)="update(item)">Modificar</a>&nbsp;<a class="btn btn-outline-danger">Eliminar</a></td>
+                <td><a class="btn btn-outline-primary" (click)="update(item)">Modificar</a>&nbsp;<a class="btn btn-outline-danger" (click)="eliminar(item.id)">Eliminar</a></td>
             </tr>
         </tbody>
     </table>

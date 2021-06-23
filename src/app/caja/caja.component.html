@@ -1,0 +1,47 @@
+<div class="row" style="background: white;padding:15px 15px;margin: 0;">
+
+    <div>
+        <a class="btn btn-primary" (click)="finalizarCompra()" style="float:right">Finalizar Compra</a>
+        <H2>Caja</H2>
+        <hr>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col" *ngFor="let item of columnas">{{item}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let producto of cartProduct">
+                <td><img [src]="producto.imagenUrl" width="50px" height="50px" alt=""></td>
+                <td>{{producto.nombre | uppercase }}</td>
+                <td>
+                    <a (click)="plus(producto)" class="btn btn-danger"><i class="bi bi-plus"></i></a>
+                    <input type="text" [value]="producto.cantidad" style="width: 35px; margin: 2px 5px; text-align: center;">
+                    <a (click)="less(producto)" class="btn btn-danger"><i class="bi bi-file-minus"></i></a>
+                </td>
+                <td>{{producto.sku}}</td>
+                <td><strong>{{producto.precio}} $</strong></td>
+                <td><a class="btn btn-danger" (click)="deleteItem(producto)"><i class="bi bi-trash"></i></a></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <div id="total">
+                <h6>Total: {{total}} $ </h6>
+            </div>
+        </tfoot>
+    </table>
+
+    <form class="row g-3">
+        <div class="col-auto">
+            <label>Ingrese el monto recibido</label>
+        </div>
+        <div class="col-auto">
+            <input type="number" [(ngModel)]="monto" class="form-control" name="monto" placeholder="Monto">
+        </div>
+        <div class="col-auto" style="display: flex;">
+            <button style="margin-right: 8px;" class="btn btn-primary mb-3" (click)="handleCambio()">Cobrar</button>
+            <div><label [class]="cambioDebe"><strong>Cambio: {{cambio}} $</strong></label></div>
+        </div>
+    </form>
+</div>
