@@ -23,13 +23,19 @@ export class ProductosComponent implements OnInit {
   }
 
   addCart(producto:Producto){
-    this.cartProduct.id = producto.id;
-    this.cartProduct.nombre = producto.nombre;
-    this.cartProduct.sku = producto.codigo;
-    this.cartProduct.precio = producto.precioVenta;
-    this.cartProduct.imagenUrl = producto.imagenUrl;
-    this.cartProduct.cantidad = this.qty;
-    sessionStorage.setItem("producto"+producto.id,JSON.stringify(this.cartProduct));
+    if (this.qty === 0) {
+      alert("LA CANTIDAD DE PRODUCTOS SELECCIONADOS ES 0, INGRESE LA CANTIDAD DESEADA.");
+    } else {
+      this.cartProduct.id = producto.id;
+      this.cartProduct.nombre = producto.nombre;
+      this.cartProduct.sku = producto.codigo;
+      this.cartProduct.precio = producto.precioVenta;
+      this.cartProduct.imagenUrl = producto.imagenUrl;
+      this.cartProduct.cantidad = this.qty;
+      sessionStorage.setItem("producto"+producto.id,JSON.stringify(this.cartProduct));
+      alert("EL PRODUCTO FUE INGRESADO A CAJA CORRECTAMENTE.");
+    }
+   
   }
 
   plus(){

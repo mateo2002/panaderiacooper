@@ -10,7 +10,7 @@
         <li class="list-group-item"><strong>{{producto.stock}}</strong></li>
     </ul>
     <div class="card-body">
-        <a (click)="addCart(producto)" class="btn btn-info card-link"><i class="bi bi-cash-coin"></i></a>
+        <a (click)="addCart(producto)" class="btn btn-info card-link" ><i class="bi bi-cash-coin"></i></a>
         <a [routerLink]="['/producto',producto.id]" class="btn btn-info card-link"><i class="bi bi-eye"></i></a>
     </div>
     <div class="qty">
