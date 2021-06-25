@@ -177,16 +177,6 @@
       "stock": 0
     },
     {
-      "id": 13,
-      "codigo": "EER",
-      "nombre": "Torta africana",
-      "descripcion": "Torta Afrinaca",
-      "precioVenta": "400",
-      "precioCosto": "500",
-      "imagenUrl": "https://lh3.googleusercontent.com/proxy/fhplsBe3GEWZa9TdLqqhI2MGVRPIbC9I9nNi3iTBATrNkgJ88VYRmwWHotrT60pcWhLkBT0zlugRXYDetedabvjP1p_tzu6J-CffKiNJMhg",
-      "stock": "40"
-    },
-    {
       "id": 14,
       "codigo": "PPO",
       "nombre": "Pan arabe",
@@ -195,6 +185,16 @@
       "precioCosto": "45",
       "imagenUrl": "https://www.cucinare.tv/wp-content/uploads/2020/07/Pan-%C3%A1rabe.jpg",
       "stock": 0
+    },
+    {
+      "id": 15,
+      "codigo": "Edps",
+      "nombre": "Pedro gonzalez",
+      "descripcion": "descripcion",
+      "precioVenta": "23",
+      "precioCosto": "233",
+      "imagenUrl": "imagen",
+      "stock": "5"
     }
   ]
 }
